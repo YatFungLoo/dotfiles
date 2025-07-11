@@ -1,0 +1,38 @@
+[user]
+name = {{ .username }}
+email = {{ .email }}
+
+[core]
+excludesfile = ~/.gitignore_global
+editor = hx
+
+[alias]
+s = status -sb
+l = log --oneline -7
+rbi = rebase --interactive
+
+[core]
+excludesfile = ~/.gitignore_global
+editor = hx
+
+[commit]
+gpgsign = true
+verbose = true
+
+[rebase]
+autosquash = true
+autostash = true
+
+[merge]
+{{ if eq .chezmoi.os "darwin" -}}
+conflictStyle = "zdiff3"
+{{- end }}
+
+[stash]
+showPatch = true
+
+[status]
+showStash = true
+
+[merge]
+conflictStyle = "zdiff3"

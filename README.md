@@ -1,0 +1,3 @@
+```bash
+$ chezmoi init YatFungLoo
+```
