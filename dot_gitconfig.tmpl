@@ -29,6 +29,8 @@ autostash = true
 [merge]
 {{ if eq .chezmoi.os "darwin" -}}
 conflictStyle = "zdiff3"
+{{ else if eq .chezmoi.os "linux" -}}
+conflictstyle = "diff3"
 {{- end }}
 
 [stash]
