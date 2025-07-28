@@ -18,7 +18,9 @@ excludesfile = ~/.gitignore_global
 editor = hx
 
 [commit]
+{{ if eq .chezmoi.os "darwin" -}}
 gpgsign = true
+{{- end }}
 verbose = true
 
 [pull]
