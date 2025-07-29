@@ -7,18 +7,22 @@ bind r source-file ~/.tmux.conf
 # Enable mouse mode (tmux 2.1 and above)
 set -g mouse on
 
+# new prefix
+unbind C-b
+set -g prefix 'C-\'
+bind 'C-\' send-prefix
+
 # window options
 set-window-option -g automatic-rename off
 set-option -g base-index 1
-bind-key h select-pane -L
-bind-key l select-pane -R
-bind-key j select-pane -U
-bind-key k select-pane -D
 bind -n M-[ select-pane -L
 bind -n M-] select-pane -R
+# bind -n 'M-;' select-pane -U
+bind -n "M-'" select-pane -D
 
 # colour options
 set -g default-terminal "xterm"
-set -g pane-active-border-style fg=blue
-set -g status-bg black
+set -g pane-active-border-style fg=yellow
+set -g pane-active-border-style bg=grey
 set -g status-fg white
+set -g status-bg black

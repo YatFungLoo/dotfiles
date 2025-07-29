@@ -9,6 +9,7 @@
 [alias]
     s = status -sb
     l = log --oneline -7
+    stat = diff --stat
     u = add --update
     ca = commit --amend
     rbi = rebase --interactive
@@ -42,6 +43,3 @@
     
 [status]
     showStash = true
-    
-[merge]
-    conflictStyle = "zdiff3"
