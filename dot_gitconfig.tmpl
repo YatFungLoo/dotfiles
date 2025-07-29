@@ -1,47 +1,47 @@
 [user]
-name = {{ .username }}
-email = {{ .email }}
+    name = {{ .username }}
+    email = {{ .email }}
 
 [core]
-excludesfile = ~/.gitignore_global
-editor = hx
+    excludesfile = ~/.gitignore_global
+    editor = hx
 
 [alias]
-s = status -sb
-l = log --oneline -7
-u = add --update
-ca = commit --amend
-rbi = rebase --interactive
-
+    s = status -sb
+    l = log --oneline -7
+    u = add --update
+    ca = commit --amend
+    rbi = rebase --interactive
+    
 [core]
-excludesfile = ~/.gitignore_global
-editor = hx
-
+    excludesfile = ~/.gitignore_global
+    editor = hx
+    
 [commit]
 {{ if eq .chezmoi.os "darwin" -}}
-gpgsign = true
+    gpgsign = true
 {{- end }}
-verbose = true
-
+    verbose = true
+    
 [pull]
-rebase = true
-
+    rebase = true
+    
 [rebase]
-autosquash = true
-autostash = true
-
+    autosquash = true
+    autostash = true
+    
 [merge]
 {{ if eq .chezmoi.os "darwin" -}}
-conflictStyle = "zdiff3"
+    conflictStyle = "zdiff3"
 {{ else if eq .chezmoi.os "linux" -}}
-conflictstyle = "diff3"
+    conflictstyle = "diff3"
 {{- end }}
-
+    
 [stash]
-showPatch = true
-
+    showPatch = true
+    
 [status]
-showStash = true
-
+    showStash = true
+    
 [merge]
-conflictStyle = "zdiff3"
+    conflictStyle = "zdiff3"
