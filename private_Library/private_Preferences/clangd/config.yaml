@@ -5,7 +5,7 @@ CompileFlags:
 Diagnostics:
   ClangTidy:
     Add: [
-      modernize-*,
+      # modernize-*,
       performance-*,
       readability-*,
     ]
