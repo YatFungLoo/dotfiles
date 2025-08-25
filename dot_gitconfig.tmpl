@@ -8,8 +8,11 @@
 
 [alias]
     s = status -sb
-    l = log --oneline -7
-    stat = diff --stat
+    l = log --oneline -5
+    dp = diff --patch-with-stat
+    dh = diff --patch-with-stat HEAD
+    ds = diff --patch-with-stat --staged
+    sp = show --patch-with-stat
     u = add --update
     ca = commit --amend
     rbi = rebase --interactive
