@@ -4,7 +4,9 @@ set completion-ignore-case on
 set show-all-if-ambiguous on
 set page-completions on
 set completion-query-items 200
+{{ if eq .chezmoi.os "darwin" -}}
 set print-completion-horizontally on
+{{- end }}
 set match-hidden-files off
 set visible-stats on
 

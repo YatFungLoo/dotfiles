@@ -17,8 +17,9 @@ duration = 150
 color = "#1D1D1D"
 
 [font]
-size = 13.0
+size = 12.0
 
+{{ if eq .chezmoi.os "darwin" -}}
 [font.bold]
 family = "DejaVuSansM Nerd Font Mono"
 style = "Heavy"
@@ -34,3 +35,4 @@ style = "Medium Italic"
 [font.normal]
 family = "DejaVuSansM Nerd Font Mono"
 style = "Regular"
+{{- end }}

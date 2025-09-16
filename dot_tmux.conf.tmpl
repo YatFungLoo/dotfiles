@@ -1,10 +1,14 @@
 # Yat Fung's tmux config file
 # Imported date: 7 Nov, 2023
 
+# term
+set -g default-terminal "tmux-256color"
+
 # new prefix
 unbind C-b
 set -g prefix '`'
 bind '`' send-prefix
+set -s escape-time 0
 
 # window options
 setw -g mode-keys vi
