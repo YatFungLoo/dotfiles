@@ -16,33 +16,34 @@
     u = add --update
     ca = commit --amend
     rbi = rebase --interactive
-    
+
 [core]
     excludesfile = ~/.gitignore_global
     editor = hx
-    
+
 [commit]
 {{ if eq .chezmoi.os "darwin" -}}
     gpgsign = true
 {{- end }}
     verbose = true
-    
+    template = ~/.gitmessage
+
 [pull]
     rebase = true
-    
+
 [rebase]
     autosquash = true
     autostash = true
-    
+
 [merge]
 {{ if eq .chezmoi.os "darwin" -}}
     conflictStyle = "zdiff3"
 {{ else if eq .chezmoi.os "linux" -}}
     conflictstyle = "diff3"
 {{- end }}
-    
+
 [stash]
     showPatch = true
-    
+
 [status]
     showStash = true
