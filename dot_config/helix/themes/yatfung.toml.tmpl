@@ -1,8 +1,9 @@
 inherits = "modus_vivendi"
 
-"ui.background" = { bg = "yatfung-grey", fg = "yatfung-white" } # Default background colour.
-
+"ui.background" = { bg = "yatfung-gray", fg = "yatfung-white" } # Default background colour.
 'ui.text' = { fg = "yatfung-white" } # Default text colour.
+'ui.virtual.ruler' = { bg = "yatfung-lightgray" }
+'ui.cursorline.primary' = { bg = "yatfung-lightgray"}
 
 'comment' = { fg = "dark-orange", modifiers = [""] } # This is a comment.
 'comment.line' = { fg = "dark-orange", modifiers = [""] } # Line comments, like this.
@@ -10,6 +11,7 @@ inherits = "modus_vivendi"
 'comment.block.documentation' = { fg = "dark-orange", modifiers = [""] } # Doc comments, e.g '///' in rust.
 
 [palette]
-yatfung-grey = "#1A1A1A"
+yatfung-gray = "#1A1A1A"
+yatfung-lightgray = "#282828"
 yatfung-white = "#F6F6F6"
 dark-orange = "#CF8C55"

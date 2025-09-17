@@ -8,11 +8,12 @@ cursorline = true
 color-modes = true
 scrolloff = 0
 rulers = [100, 140, 180, 220, 240]
+popup-border = "all"
 
 [editor.statusline]
 center = ["file-name"]
-left = ["mode", "spinner", "version-control"]
-right = ["diagnostics", "selections", "position", "file-type"]
+left = ["mode", "spinner", "version-control", "spinner", "diagnostics"]
+right = ["position", "selections", "file-type"]
 
 [editor.whitespace]
 render = "all"
