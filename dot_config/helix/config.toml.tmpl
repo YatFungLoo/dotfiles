@@ -1,34 +1,24 @@
 theme = "yatfung"
 
 [editor]
-mouse = true
-auto-save = true
 bufferline = "always"
-cursorline = true
 color-modes = true
 scrolloff = 0
 rulers = [100, 140, 180, 220, 240]
+popup-border = "all"
 
 [editor.statusline]
 center = ["file-name"]
-left = ["mode", "spinner", "version-control"]
-right = ["diagnostics", "selections", "position", "file-type"]
-
-[editor.whitespace]
-render = "all"
-
-[editor.whitespace.characters]
-newline = "¬"
-
-[editor.cursor-shape]
-insert = "bar"
-normal = "block"
-select = "underline"
+left = ["mode", "spinner", "version-control", "spinner", "diagnostics"]
+right = ["position", "selections", "file-type"]
 
 [editor.file-picker]
 hidden = false
 
 [keys.normal]
+C-c = "normal_mode"
+"S-A-f" = ":fmt"
+"A-s" = ":w"
 "d" = "delete_selection_noyank"
 "x" = "delete_selection"
 "X" = "extend_line_below"
@@ -40,10 +30,14 @@ C-f = "move_char_right"
 C-b = "move_char_left"
 
 [keys.select]
+C-c = "normal_mode"
 "x" = "delete_selection"
 "X" = "extend_line_below"
 
 [keys.insert]
+"S-A-f" = ":fmt"
+"A-s" = ":w"
+C-c = "normal_mode"
 C-p = "move_line_up"
 C-n = "move_line_down"
 C-e = "goto_line_end_newline"
