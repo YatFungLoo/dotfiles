@@ -1,6 +1,9 @@
 [[language]]
 name = "markdown"
-formatter = { command = 'prettier', args = [
-  "--parser",
-  "markdown",
-  ]}
+formatter = { command = 'prettier', args = ["--parser", "markdown"]}
+
+[[language]]
+name = "python"
+language-servers = ["ruff"]
+formatter = { command = "ruff", args = ["format", "-"] }
+
