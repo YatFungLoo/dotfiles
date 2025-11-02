@@ -4,6 +4,10 @@ alias git_def_config='git config user.email "{{ .email }}" && git config user.na
 alias em='emacs -nw'
 alias sd="cd \$(find * -type d | fzf --height 40%)"
 alias lg="lazygit"
+rgrep() {
+    target=$1
+    grep -rnw . -e "$target"
+}
 toc() {
     file=$1
     bash ~/md-toc.sh "$file"
