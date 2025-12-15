@@ -156,6 +156,10 @@ unset __conda_setup
 # git gpg key signin tty
 export GPG_TTY=$(tty)
 
+# tmux bash history workaround
+export PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
+shopt -s histappend
+
 {{ if eq .chezmoi.os "darwin" -}}
 eval "$(/opt/homebrew/bin/brew shellenv)"
 . "$HOME/.cargo/env"
