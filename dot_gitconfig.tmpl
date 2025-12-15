@@ -8,15 +8,17 @@
 
 [alias]
     s = status -sb
-    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    graph = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
     l = log --oneline -5
     dp = diff --patch-with-stat
     dh = diff --patch-with-stat HEAD
     ds = diff --patch-with-stat --staged
     sp = show --patch-with-stat
     u = add --update
+    ap = add --patch
     r = restore
     rs = restore --staged
+    rp = restore --patch --staged
     ca = commit --amend
     rbi = rebase --interactive
 
