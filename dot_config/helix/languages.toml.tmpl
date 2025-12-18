@@ -3,6 +3,24 @@ name = "markdown"
 formatter = { command = 'prettier', args = ["--parser", "markdown"]}
 
 [[language]]
+name = "javascript"
+formatter = { command = 'prettier', args = ["--parser", "typescript"]}
+
+[language-server.emmet-ls]
+command = "emmet-ls"
+args = ["--stdio"]
+
+[[language]]
+name = "html"
+formatter = { command = 'prettier', args = ["--parser", "html"]}
+language-servers = ["emmet-ls"]
+
+[[language]]
+name = "css"
+formatter = { command = 'prettier', args = ["--parser", "css"]}
+language-servers = ["emmet-ls"]
+
+[[language]]
 name = "python"
 language-servers = ["ruff"]
 formatter = { command = "ruff", args = ["format", "-"] }
