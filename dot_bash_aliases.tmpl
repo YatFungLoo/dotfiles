@@ -12,6 +12,9 @@ toc() {
     file=$1
     bash ~/md-toc.sh "$file"
 }
+readme2pdf() {
+    pandoc README.md -s -o README.pdf && open README.pdf
+}
 e() {
     file=$1
     emacs "$file" &
