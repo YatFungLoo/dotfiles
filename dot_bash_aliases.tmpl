@@ -18,7 +18,7 @@ readme2pdf() {
 }
 e() {
     file=$1
-    emacs "$file" &
+    emacs "$file" & disown
 }
 pdfcombine()
 {
